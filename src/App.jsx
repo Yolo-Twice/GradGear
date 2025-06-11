@@ -1,5 +1,11 @@
+import Header from "./components/header.jsx"
 export default function App(){
-  return (<p className="text-xl">
+  return (
+    <>
+    <Header />
+  <p className="text-xl">
     Grad Gear
-  </p>)
+  </p>
+  </>
+  )
 }
