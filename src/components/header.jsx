@@ -9,6 +9,7 @@ export default function Header() {
             <h1 className="text-[40px] text-[#FAF9F6] font-extrabold tracking-wide font-sans drop-shadow-md">
                 GradGear
             </h1>
+            
         </header>
     )
 }
