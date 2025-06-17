@@ -10,7 +10,7 @@ export default function Main() {
     function handleGetStarted() {
         setGetStartedButton( prevGetStartedButton => ! prevGetStartedButton)
     }
-    return (<div className="flex flex-col mx-auto gap-10 mt-36">
+    return (<div className="flex flex-col mx-auto gap-6 mt-[12REM]">
         <div className="lg:max-w-[70%] mx-auto flex flex-col gap-y-6" >
             <h1 className="font-inter text-white text-center text-5xl font-bold mx-auto">
                 Something Something Something Something Something Something</h1>
