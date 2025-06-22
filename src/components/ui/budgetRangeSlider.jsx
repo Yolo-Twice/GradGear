@@ -1,13 +1,13 @@
 import * as Slider from '@radix-ui/react-slider';
 
-export default function BudgetRangeSlider({ value, onChange }) {
+export default function BudgetRangeSlider({ value, onChange ,maxValue,minValue}) {
   return (
     <Slider.Root
       className="relative flex items-center select-none touch-none w-full h-6"
       value={value} // Two values = two thumbs
-      max={100000}
-      min={0}
-      step={5000}
+      max={maxValue}
+      min={minValue}
+      step={1000}
       minStepsBetweenThumbs={1} // prevents overlap
       onValueChange={onChange}
     >

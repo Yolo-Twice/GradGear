@@ -1,9 +1,9 @@
-import BudgetSlider from "../ui/budgetSlider.jsx"
+import BudgetRangeSlider from "../ui/budgetRangeSlider.jsx";
 
 
 export default function PickMajorForm(props) {
     return (
-        <form  name="PickMajor" className="text-2xl w-[60%] max-w-[42rem] mx-auto p-6 rounded-2xl shadow-lg bg-[#36393e] text-[#7289da] text-center font-bold">
+        <form  name="PickMajor" className="text-2xl w-[80%] max-w-[50rem] mx-auto p-6 rounded-2xl shadow-lg bg-[#36393e] text-[#7289da] text-center font-bold">
             <h2 className=" mx-auto font-inter text-4xl" >Pick Your Major!</h2>
             <select className="text-xl p-2 mt-4 rounded-2xl bg-[#424549] shadow-lg text-white text-center" name="Major" id="Major">
                 <option value="" >Select</option>
@@ -20,8 +20,11 @@ export default function PickMajorForm(props) {
                 <option value="Physics">Physics</option>
                 <option value="Mathematics">Mathematics</option>
             </select>
-            <BudgetSlider value={props.budget} onChange={props.setBudget}/>
-            <p>{props.budget}</p>
+            <div className="flex flex-row items-center gap-x-6 pt-12">
+            <p>₹{props.budget[0]}</p>
+            <BudgetRangeSlider value={props.budget} onChange={props.setBudget} maxValue={100000} minValue={5000} recommendedValue={50000}/>
+            <p>₹{props.budget[1]}</p>
+            </div>
             </form>
     )
 }
