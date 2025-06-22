@@ -20,11 +20,20 @@ export default function PickMajorForm(props) {
                 <option value="Physics">Physics</option>
                 <option value="Mathematics">Mathematics</option>
             </select>
-            <div className="flex flex-row items-center gap-x-6 pt-12">
-            <p>₹{props.budget[0]}</p>
-            <BudgetRangeSlider value={props.budget} onChange={props.setBudget} maxValue={100000} minValue={5000} recommendedValue={50000}/>
-            <p>₹{props.budget[1]}</p>
-            </div>
+            <div className="flex flex-row items-center gap-x-6 mt-6">
+  <p className="w-20 text-right">₹{props.budget[0]}</p>
+  <div className="flex-1">
+    <BudgetRangeSlider
+      value={props.budget}
+      onChange={props.setBudget}
+      maxValue={100000}
+      minValue={5000}
+      recommendedValue={50000}
+    />
+  </div>
+  <p className=" w-20 text-left ">₹{props.budget[1]}</p>
+</div>
+
             </form>
     )
 }
