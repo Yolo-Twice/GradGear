@@ -10,6 +10,12 @@ export default function PickMajorForm() {
                 <option value="Law">Law</option>
                 <option value="Design">Design</option>
                 <option value="Music">Music</option>
+                <option value="Management">Management</option>
+                <option value="Fashion">Fashion</option>
+                <option value="Dental Science">Dental Science</option>
+                <option value="Chemistry">Chemistry</option>
+                <option value="Physics">Physics</option>
+                <option value="Mathematics">Mathematics</option>
             </select>
             </form>
     )
