@@ -1,7 +1,6 @@
 import { useState } from "react"
 import PickMajorForm from "./main components/pickMajorForm"
 import {Cover} from "./ui/cover.jsx"
-import BudgetSlider from "./ui/budgetSlider.jsx"
 
 
 export default function Main() {
@@ -24,7 +23,7 @@ export default function Main() {
 
         {getStartedButton ? (
             <>
-        <PickMajorForm /> 
+        <PickMajorForm budget={budget} setBudget={setBudget}/> 
         <button className="bg-white w-[10%] mx-auto" onClick={handleGetStarted}>temporary go back button</button>
         </>
         ) : 
@@ -35,7 +34,7 @@ export default function Main() {
             className="bg-[#25a86c] hover:bg-[#32ba7c] rounded-2xl shadow-lg w-[35%] mt-10 mx-auto h-[9vh] text-white font-inter text-center text-3xl font-semibold">Get Started!
         </button>
 )}
-        {/* <BudgetSlider value={budget} onChange={setBudget}/>
-            </div> */}
+         
+        </div>
     )
 }
