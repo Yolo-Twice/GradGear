@@ -2,12 +2,12 @@ import { useState } from "react"
 import PickMajorForm from "./main components/pickMajorForm"
 import {Cover} from "./ui/cover.jsx"
 import BudgetSlider from "./ui/budgetSlider.jsx"
-
+import BudgetRangeSlider from "./ui/budgetRangeSlider.jsx";
 
 export default function Main() {
     const [getStartedButton,setGetStartedButton] = useState(false)
     const [budget, setBudget] = useState(10000);
-
+    const [budgetRange, setBudgetRange] = useState([20000, 80000])
 
     function handleGetStarted() {
         setGetStartedButton( prevGetStartedButton => ! prevGetStartedButton)
@@ -28,14 +28,19 @@ export default function Main() {
         <button className="bg-white w-[10%] mx-auto" onClick={handleGetStarted}>temporary go back button</button>
         </>
         ) : 
-        (
+        ( 
         <button 
             aria-label="Get Started"
             onClick={handleGetStarted} 
             className="bg-[#25a86c] hover:bg-[#32ba7c] rounded-2xl shadow-lg w-[35%] mt-10 mx-auto h-[9vh] text-white font-inter text-center text-3xl font-semibold">Get Started!
         </button>
 )}
-        {/* <BudgetSlider value={budget} onChange={setBudget}/>
-            </div> */}
+        <BudgetSlider value={budget} onChange={setBudget}/>
+
+        <BudgetRangeSlider value={budgetRange} onChange={setBudgetRange} />
+
+            </div>
+
+            
     )
 }
