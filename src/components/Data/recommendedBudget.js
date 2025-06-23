@@ -1,9 +1,10 @@
-export default Budget = [
+const Budget = [
   {
     id: 1,
     name: "Computer Science",
     recommended: 60000,
     minimum: 25000,
+    max: 170000,
     justification: "Laptop + Mouse + Basic accessories + Internet backup"
   },
   {
@@ -11,6 +12,7 @@ export default Budget = [
     name: "Medicine",
     recommended: 70000,
     minimum: 20000,
+    max: 100000,
     justification: "Stethoscope + Dissection Kit + Lab Coat + Books + Basic Tablet"
   },
   {
@@ -18,6 +20,7 @@ export default Budget = [
     name: "Architecture",
     recommended: 90000,
     minimum: 30000,
+    max: 150000,
     justification: "Entry-level Laptop + Drawing Tools + Sheets & Adhesives"
   },
   {
@@ -25,6 +28,7 @@ export default Budget = [
     name: "Law",
     recommended: 40000,
     minimum: 15000,
+    max: 80000,
     justification: "Formal Wear + Legal Textbooks + Budget Laptop"
   },
   {
@@ -32,6 +36,7 @@ export default Budget = [
     name: "Design",
     recommended: 100000,
     minimum: 25000,
+    max: 180000,
     justification: "Sketching Tools + Basic Graphics Tablet + Design-ready Laptop"
   },
   {
@@ -39,6 +44,7 @@ export default Budget = [
     name: "Music",
     recommended: 80000,
     minimum: 20000,
+    max: 200000,
     justification: "Instrument + Headphones + Laptop/Smartphone for DAW and Practice"
   },
   {
@@ -46,27 +52,31 @@ export default Budget = [
     name: "Management",
     recommended: 50000,
     minimum: 20000,
+    max: 85000,
     justification: "Laptop + Formal Attire + Basic Stationery + Business Books"
   },
   {
-  id: 8,
-  name: "Fashion",
-  recommended: 60000,
-  minimum: 25000,
-  justification: "Sketching supplies + Tailoring tools + Basic Laptop/Tablet"
-},
-{
-  id: 9,
-  name: "Dental Science",
-  recommended: 70000,
-  minimum: 25000,
-  justification: "Dental tools + Typodont + Lab Coat + Books + Basic Laptop"
-},
-{
+    id: 8,
+    name: "Fashion",
+    recommended: 60000,
+    minimum: 25000,
+    max: 120000,
+    justification: "Sketching supplies + Tailoring tools + Basic Laptop/Tablet"
+  },
+  {
+    id: 9,
+    name: "Dental Science",
+    recommended: 70000,
+    minimum: 25000,
+    max: 120000,
+    justification: "Dental tools + Typodont + Lab Coat + Books + Basic Laptop"
+  },
+  {
     id: 10,
     name: "Chemistry",
     recommended: 50000,
     minimum: 20000,
+    max: 90000,
     justification: "Lab Coat + Safety Gear + Glassware Kit + Textbooks + Basic Laptop"
   },
   {
@@ -74,6 +84,7 @@ export default Budget = [
     name: "Physics",
     recommended: 50000,
     minimum: 20000,
+    max: 85000,
     justification: "Scientific Calculator + Lab Tools + Textbooks + Basic Laptop"
   },
   {
@@ -81,6 +92,9 @@ export default Budget = [
     name: "Mathematics",
     recommended: 40000,
     minimum: 15000,
+    max: 70000,
     justification: "Scientific Calculator + Theoretical Textbooks + Budget Laptop"
   }
 ];
+
+export default Budget;
