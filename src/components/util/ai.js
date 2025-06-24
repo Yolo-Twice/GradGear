@@ -1,8 +1,7 @@
-export async function queryModel(prompt) {
+export default async function queryModel(prompt) {
   try {
     // Convert the array into a comma-separated string
-    const promptString = Array.isArray(prompt) ? prompt.join(', ') : String(prompt);
-
+    const promptString = Array.isArray(prompt) ? prompt.map(obj => JSON.stringify(obj)).join(', ') : String(prompt);
     const res = await fetch('https://gradgearbackend.onrender.com/api/infer', {
       method: 'POST',
       headers: {

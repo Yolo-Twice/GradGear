@@ -1,6 +1,7 @@
 import { useState } from "react";
 import BudgetRangeSlider from "../ui/budgetRangeSlider.jsx";
 import BudgetData from "../Data/recommendedBudget.js";
+import queryModel from "../util/ai.js"
 
 export default function PickMajorForm(props) {
   const [majorChange, setMajorChange] = useState(false)
@@ -26,18 +27,18 @@ export default function PickMajorForm(props) {
       setMajorChange(false);
     }
   }
-//  async function FormSubmit(data) {
-//   console.log(data.get("Major"))
-//  }
 
-function handleFormSubmit(data) {
+
+async function handleFormSubmit(data) {
   data.preventDefault()
   const form = data.target;
   const formData = new FormData(form);
+  
+  const major = formData.get("Major")
+  const budgetRange = `Between INR ${props.budget[0]} and INR ${props.budget[1]}`
+  const collectedData = [{major:major,budgetRange:budgetRange}]
 
-  console.log("Major:", formData.get("Major"));
-  console.log("Budget Min:", props.budget[0]);
-  console.log("Budget Max:", props.budget[1]);
+  const result =  await queryModel(collectedData)
 
 
 }
@@ -45,15 +46,13 @@ function handleFormSubmit(data) {
 
 
   return (
-    <form onSubmit={handleFormSubmit} name="PickMajor" className="text-2xl w-[80%] max-w-[50rem] mx-auto p-6 rounded-2xl shadow-lg bg-[#36393e] text-[#7289da] text-center font-bold" >
-      <h2 className=" mx-auto font-inter text-4xl" >Pick Your Major!</h2>
+    <form onSubmit={handleFormSubmit} name="PickMajor"  className="flex flex-col bg-[#1f2124] rounded-xl p-12 pt-4 mx-auto">
+      <h2 className=" text-4xl mx-auto text-[#c8cacf] text-center font-bold mb-10" >Tell us about yourself!</h2>
+      
+      <div className="w-[25rem] flex flex-col text-2xl max-w-[50rem] mx-auto p-6 rounded-2xl shadow-lg bg-[#36393e]  text-[#7289da] text-center font-bold">
+      <h2 className=" mx-auto font-inter text-3xl" >Pick Your Major!</h2>
       <select className="text-xl p-2 mt-4 rounded-2xl bg-[#424549] shadow-lg text-white text-center" name="Major" id="Major" onChange={handleMajorSelect}>
-        {/* {BudgetData.map((major) => (
-  <option key={major.name} value={major.name}>
-    {major.name}
-  </option>
-))} */}
-
+      
          <option value="" >Select</option>
         <option value="Computer Science">Computer Science</option>
         <option value="Medicine">Medicine</option>
@@ -68,9 +67,12 @@ function handleFormSubmit(data) {
         <option value="Physics">Physics</option>
         <option value="Mathematics">Mathematics</option> 
       </select>
-      
+      </div>
 
       {majorChange &&
+      <>
+      <div className="w-[25rem] mt-6 flex flex-col text-2xl max-w-[50rem] mx-auto p-6 rounded-2xl shadow-lg bg-[#36393e] text-[#7289da] text-center font-bold">
+        <p className="mx-auto font-inter text-3xl">Set your Budget</p>
         <div className="flex flex-row items-center gap-x-6 mt-6">
           <p className="w-20 text-right">₹{props.budget[0]}</p>
           <div className="flex-1">
@@ -84,14 +86,17 @@ function handleFormSubmit(data) {
           </div>
           <p className=" w-20 text-left ">₹{props.budget[1]}</p>
         </div>
+        </div>
+        <button 
+        aria-label="Get Recommendation"
+        type="submit"
+        onClick={handleGetRecommendation} 
+        className="bg-[#25a86c] hover:bg-[#32ba7c] rounded-2xl shadow-lg w-[12rem] mt-10 mx-auto h-[3rem] text-white font-inter text-center text-2xl font-semibold">SUBMIT
+    </button>
+    </>
       }
     
-      <button 
-            aria-label="Get Recommendation"
-            type="submit"
-            onClick={handleGetRecommendation} 
-            className="bg-[#25a86c] hover:bg-[#32ba7c] rounded-2xl shadow-lg w-[12rem] mt-10 mx-auto h-[3rem] text-white font-inter text-center text-2xl font-semibold">SUBMIT
-        </button>
+      
 
     </form>
   )
