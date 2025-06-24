@@ -5,6 +5,11 @@ import BudgetData from "../Data/recommendedBudget.js";
 export default function PickMajorForm(props) {
   const [majorChange, setMajorChange] = useState(false)
   const [selectedMajor, setSelectedMajor] = useState(null);
+  const [fetchRec,setFetchRec] = useState(false)
+
+  function handleGetRecommendation() {
+    setFetchRec(prevFetchRec => !prevFetchRec)
+  }
 
   function handleMajorSelect(e) {
     const majorName = e.target.value;
@@ -21,11 +26,26 @@ export default function PickMajorForm(props) {
       setMajorChange(false);
     }
   }
+//  async function FormSubmit(data) {
+//   console.log(data.get("Major"))
+//  }
+
+function handleFormSubmit(data) {
+  data.preventDefault()
+  const form = data.target;
+  const formData = new FormData(form);
+
+  console.log("Major:", formData.get("Major"));
+  console.log("Budget Min:", props.budget[0]);
+  console.log("Budget Max:", props.budget[1]);
+
+
+}
 
 
 
   return (
-    <form name="PickMajor" className="text-2xl w-[80%] max-w-[50rem] mx-auto p-6 rounded-2xl shadow-lg bg-[#36393e] text-[#7289da] text-center font-bold">
+    <form onSubmit={handleFormSubmit} name="PickMajor" className="text-2xl w-[80%] max-w-[50rem] mx-auto p-6 rounded-2xl shadow-lg bg-[#36393e] text-[#7289da] text-center font-bold" >
       <h2 className=" mx-auto font-inter text-4xl" >Pick Your Major!</h2>
       <select className="text-xl p-2 mt-4 rounded-2xl bg-[#424549] shadow-lg text-white text-center" name="Major" id="Major" onChange={handleMajorSelect}>
         {/* {BudgetData.map((major) => (
@@ -48,6 +68,7 @@ export default function PickMajorForm(props) {
         <option value="Physics">Physics</option>
         <option value="Mathematics">Mathematics</option> 
       </select>
+      
 
       {majorChange &&
         <div className="flex flex-row items-center gap-x-6 mt-6">
@@ -64,7 +85,13 @@ export default function PickMajorForm(props) {
           <p className=" w-20 text-left ">₹{props.budget[1]}</p>
         </div>
       }
-
+    
+      <button 
+            aria-label="Get Recommendation"
+            type="submit"
+            onClick={handleGetRecommendation} 
+            className="bg-[#25a86c] hover:bg-[#32ba7c] rounded-2xl shadow-lg w-[12rem] mt-10 mx-auto h-[3rem] text-white font-inter text-center text-2xl font-semibold">SUBMIT
+        </button>
 
     </form>
   )
