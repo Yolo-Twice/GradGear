@@ -3,7 +3,7 @@ export async function queryModel(prompt) {
     // Convert the array into a comma-separated string
     const promptString = Array.isArray(prompt) ? prompt.join(', ') : String(prompt);
 
-    const res = await fetch('http://192.168.1.100:3001/api/infer', {
+    const res = await fetch('https://gradgearbackend.onrender.com/api/infer', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

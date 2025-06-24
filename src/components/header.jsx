@@ -2,7 +2,7 @@ export default function Header() {
     return (
         <header className="flex items-center justify-center gap-4 shadow-lg bg-[#7289da] px-6 py-3 h-[80px]">
             <img
-                src="src/components/gearpng.parspng.com-7.png"
+                src="gearpng.parspng.com-7.png"
                 alt="GradGearIcon"
                 className="h-[60px] w-[60px] object-contain transition-transform duration-300 hover:scale-105"
             />
