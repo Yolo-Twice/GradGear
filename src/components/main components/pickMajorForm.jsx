@@ -8,6 +8,7 @@ export default function PickMajorForm(props) {
   const [selectedMajor, setSelectedMajor] = useState(null);
   const [fetchRec,setFetchRec] = useState(false)
 
+
   function handleGetRecommendation() {
     setFetchRec(prevFetchRec => !prevFetchRec)
   }
@@ -35,10 +36,11 @@ async function handleFormSubmit(data) {
   const formData = new FormData(form);
   
   const major = formData.get("Major")
-  const budgetRange = `Between INR ${props.budget[0]} and INR ${props.budget[1]}`
+  const budgetRange = `Between ₹ ${props.budget[0]} and ₹ ${props.budget[1]}`
   const collectedData = [{major:major,budgetRange:budgetRange}]
-
-  const result =  await queryModel(collectedData)
+  const recievedPrompt = await queryModel(collectedData)
+  console.log(recievedPrompt)
+  props.setResult(recievedPrompt)
 
 
 }
@@ -46,6 +48,7 @@ async function handleFormSubmit(data) {
 
 
   return (
+    <>
     <form onSubmit={handleFormSubmit} name="PickMajor"  className="flex flex-col bg-[#1f2124] rounded-xl p-12 pt-4 mx-auto">
       <h2 className=" text-4xl mx-auto text-[#c8cacf] text-center font-bold mb-10" >Tell us about yourself!</h2>
       
@@ -96,8 +99,7 @@ async function handleFormSubmit(data) {
     </>
       }
     
-      
-
     </form>
+    </>
   )
 }

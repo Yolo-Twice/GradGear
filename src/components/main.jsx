@@ -5,6 +5,7 @@ import {Cover} from "./ui/cover.jsx"
 export default function Main() {
     const [getStartedButton,setGetStartedButton] = useState(false)
     const [budgetRange, setBudgetRange] = useState([20000, 80000])
+    const [result,setResult] = useState(null)
 
     function handleGetStarted() {
         setGetStartedButton( prevGetStartedButton => ! prevGetStartedButton)
@@ -21,8 +22,8 @@ export default function Main() {
         <div className="mx-auto mt-16">
         {getStartedButton ? (
             <>
-        <PickMajorForm budget={budgetRange} setBudget={setBudgetRange}/> 
-        <button className="bg-white mt-6 w-[16rem] mx-auto" onClick={handleGetStarted}>temporary go back button</button>
+        <PickMajorForm budget={budgetRange} setBudget={setBudgetRange} result={result} setResult={setResult}/> 
+        {/* <button className="bg-white mt-6 w-[16rem] mx-auto" onClick={handleGetStarted}>temporary go back button</button> */}
         </>
         ) : 
         ( 
@@ -31,7 +32,10 @@ export default function Main() {
             onClick={handleGetStarted} 
             className="bg-[#25a86c] hover:bg-[#32ba7c] rounded-2xl shadow-lg w-[16rem] mx-auto h-[9vh] text-white font-inter text-center text-3xl font-semibold">Get Started!
         </button>
-)}
+)}      
+        <br className="mb-[6rem]"></br>
+        {result && <div className="mb-40 rendered-content" dangerouslySetInnerHTML={{__html: result }} />}
+    
         </div>
         </div>
     )
