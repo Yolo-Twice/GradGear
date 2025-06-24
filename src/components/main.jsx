@@ -1,7 +1,7 @@
 import { useState } from "react"
 import PickMajorForm from "./main components/pickMajorForm"
 import {Cover} from "./ui/cover.jsx"
-
+import { CircleLoader } from "react-spinners"
 export default function Main() {
     const [getStartedButton,setGetStartedButton] = useState(false)
     const [budgetRange, setBudgetRange] = useState([20000, 80000])
@@ -37,6 +37,10 @@ export default function Main() {
         {result && <div className="mb-40 rendered-content" dangerouslySetInnerHTML={{__html: result }} />}
     
         </div>
+        <div className="flex w-[5rem] h-[5rem] items-center items-center justify-center bg-[#171717]">
+    <CircleLoader color="#ffffff" />
+  </div>
+
         </div>
     )
 }

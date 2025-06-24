@@ -96,6 +96,9 @@ async function handleFormSubmit(data) {
         onClick={handleGetRecommendation} 
         className="bg-[#25a86c] hover:bg-[#32ba7c] rounded-2xl shadow-lg w-[12rem] mt-10 mx-auto h-[3rem] text-white font-inter text-center text-2xl font-semibold">SUBMIT
     </button>
+     <div className="flex w-[5rem] h-[5rem] items-center justify-center bg-[#171717]">
+    <CircleLoader color="#ffffff" />
+  </div>
     </>
       }
     

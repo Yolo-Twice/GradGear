@@ -6,7 +6,7 @@ export default function Footer() {
         <div>
           <h2 className="text-2xl font-bold mb-3">GradGear</h2>
           <p className="text-sm mb-4">
-            Get a starter kit recommendation for commencing your college life according to your budget and get best buy links too. <br /> More features coming soon!
+            Get a starter kit recommendation for commencing your college life according to your budget, compare specific products and get best buy links too. <br /> <br /> More features coming soon!
           </p>
           <div className="flex space-x-4">
             <a href="#" aria-label="Twitter"><i className="fab fa-twitter text-xl"></i></a>
