@@ -1,7 +1,6 @@
 import Header from "./components/header.jsx"
 import Main from "./components/main.jsx"
 import Footer from "./footer.jsx"
-import { CircleLoader } from "react-spinners"
 export default function App(){
   return (
     <div className="flex flex-col gap-y-5">

@@ -1,6 +1,6 @@
 export default function Header() {
     return (
-        <header className="flex items-center justify-center gap-4 shadow-lg bg-[#7289da] px-6 py-3 h-[80px]">
+        <header className="fixed top-0 left-0 w-full z-50 flex items-center justify-center gap-4 shadow-lg bg-[#7289da] backdrop-blur-sm px-6 py-3 h-[80px]">
             <a href="/" className="flex items-center gap-4 h-[60px]">
                 <img
                     src="gearpng.parspng.com-7.png"
@@ -12,5 +12,5 @@ export default function Header() {
                 </h1>
             </a>
         </header>
-    )
+    );
 }
