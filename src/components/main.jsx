@@ -37,10 +37,7 @@ export default function Main() {
 )}      
         <br className="mb-[6rem]"></br>
         {loading ? <div className="flex justify-center items-center"><RingLoader color="#7289da"/></div> : result && <div className="px-6 mb-40 rendered-content" dangerouslySetInnerHTML={{__html: result }} />}
-    
         </div>
-       
-
         </div>
     )
 }
