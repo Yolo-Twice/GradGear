@@ -2,6 +2,7 @@ import { useState } from "react"
 import PickMajorForm from "./main components/pickMajorForm"
 import {Cover} from "./ui/cover.jsx"
 import { RingLoader } from "react-spinners"
+
 export default function Main() {
     const [getStartedButton,setGetStartedButton] = useState(false)
     const [budgetRange, setBudgetRange] = useState([20000, 80000])
@@ -35,7 +36,7 @@ export default function Main() {
         </button>
 )}      
         <br className="mb-[6rem]"></br>
-        {loading ? <div className="mx-auto"><RingLoader color="#FFFFFF"/></div> : result && <div className="mb-40 rendered-content" dangerouslySetInnerHTML={{__html: result }} />}
+        {loading ? <div className="flex justify-center items-center"><RingLoader color="#7289da"/></div> : result && <div className="px-6 mb-40 rendered-content" dangerouslySetInnerHTML={{__html: result }} />}
     
         </div>
        
