@@ -34,13 +34,21 @@ async function handleFormSubmit(data) {
   data.preventDefault()
   const form = data.target;
   const formData = new FormData(form);
-  
   const major = formData.get("Major")
   const budgetRange = `Between ₹ ${props.budget[0]} and ₹ ${props.budget[1]}`
   const collectedData = [{major:major,budgetRange:budgetRange}]
-  const recievedPrompt = await queryModel(collectedData)
-  console.log(recievedPrompt)
-  props.setResult(recievedPrompt)
+  props.setLoading(true)
+  try{
+    const recievedPrompt = await queryModel(collectedData)
+    console.log(recievedPrompt)
+    props.setResult(recievedPrompt)
+  } catch(err){
+    console.error(err)
+    props.setResult("An error Occured.")
+  } finally{
+    props.setLoading(false)
+  }
+  
 
 
 }
@@ -96,9 +104,7 @@ async function handleFormSubmit(data) {
         onClick={handleGetRecommendation} 
         className="bg-[#25a86c] hover:bg-[#32ba7c] rounded-2xl shadow-lg w-[12rem] mt-10 mx-auto h-[3rem] text-white font-inter text-center text-2xl font-semibold">SUBMIT
     </button>
-     <div className="flex w-[5rem] h-[5rem] items-center justify-center bg-[#171717]">
-    <CircleLoader color="#ffffff" />
-  </div>
+     
     </>
       }
     

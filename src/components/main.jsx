@@ -1,11 +1,12 @@
 import { useState } from "react"
 import PickMajorForm from "./main components/pickMajorForm"
 import {Cover} from "./ui/cover.jsx"
-import { CircleLoader } from "react-spinners"
+import { RingLoader } from "react-spinners"
 export default function Main() {
     const [getStartedButton,setGetStartedButton] = useState(false)
     const [budgetRange, setBudgetRange] = useState([20000, 80000])
     const [result,setResult] = useState(null)
+    const [loading,setLoading] = useState(false)
 
     function handleGetStarted() {
         setGetStartedButton( prevGetStartedButton => ! prevGetStartedButton)
@@ -22,7 +23,7 @@ export default function Main() {
         <div className="mx-auto mt-16">
         {getStartedButton ? (
             <>
-        <PickMajorForm budget={budgetRange} setBudget={setBudgetRange} result={result} setResult={setResult}/> 
+        <PickMajorForm budget={budgetRange} setBudget={setBudgetRange} result={result} setResult={setResult} loading={loading} setLoading={setLoading}/> 
         {/* <button className="bg-white mt-6 w-[16rem] mx-auto" onClick={handleGetStarted}>temporary go back button</button> */}
         </>
         ) : 
@@ -34,12 +35,10 @@ export default function Main() {
         </button>
 )}      
         <br className="mb-[6rem]"></br>
-        {result && <div className="mb-40 rendered-content" dangerouslySetInnerHTML={{__html: result }} />}
+        {loading ? <div className="mx-auto"><RingLoader color="#FFFFFF"/></div> : result && <div className="mb-40 rendered-content" dangerouslySetInnerHTML={{__html: result }} />}
     
         </div>
-        <div className="flex w-[5rem] h-[5rem] items-center items-center justify-center bg-[#171717]">
-    <CircleLoader color="#ffffff" />
-  </div>
+       
 
         </div>
     )
