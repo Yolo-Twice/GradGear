@@ -12,6 +12,7 @@ Just pick your major, set your budget, and let our AI-powered assistant do the r
 ## Technical Information  
 
 - Built with **React** and styled using **TailwindCSS**  
+- Backend created using Express.JS  
 - Powered by the **GROQ API** for intelligent AI-generated recommendations  
 - **Backend** hosted on [Render](https://render.com)  
 - **Frontend** deployed via [Vercel](https://vercel.com)
