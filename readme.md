@@ -2,7 +2,7 @@
 
 **Kickstart your college life with the right tools.**  
 Grad Gear recommends a personalized starter kit based on your major and budget.  
-Compare essential products, explore smart suggestions, and get direct best-buy links — all in one place.
+Compare essential products, explore smart suggestions, and get direct best-buy links — all of it in one place.
 
 **How it works:**  
 Just pick your major, set your budget, and let our AI-powered assistant do the rest.
