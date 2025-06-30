@@ -17,4 +17,5 @@ Just pick your major, set your budget, and let our AI-powered assistant do the r
 - **Backend** hosted on [Render](https://render.com)  
 - **Frontend** deployed via [Vercel](https://vercel.com)
 
-👉 [Check out the live site](https://grad-gear.vercel.app/)
+👉 [Check out the live site](https://grad-gear.vercel.app/)  
+👉 [Link to Backend Repository](https://github.com/Yolo-Twice/GradGearBackend)
