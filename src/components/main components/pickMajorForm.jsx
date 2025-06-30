@@ -57,10 +57,10 @@ async function handleFormSubmit(data) {
 
   return (
     <>
-    <form onSubmit={handleFormSubmit} name="PickMajor"  className="mx-2 md:w-[30rem] flex flex-col bg-[#1f2124] rounded-xl p-2 md:p-12 pt-4 md:mx-auto">
+    <form onSubmit={handleFormSubmit} name="PickMajor"  className=" w-[25rem] md:w-[30rem] flex flex-col bg-[#1f2124] rounded-xl p-2 md:p-12 pt-4 mx-auto">
       <h2 className="text-3xl md:text-4xl mx-auto text-[#c8cacf] text-center font-bold mb-10" >Tell us about yourself!</h2>
       
-      <div className="w-[25rem] flex flex-col text-2xl max-w-[50rem] mx-auto p-6 rounded-2xl shadow-lg bg-[#36393e]  text-[#7289da] text-center font-bold">
+      <div className="w-[24rem] md:w-[25rem] flex flex-col text-2xl max-w-[50rem] mx-auto p-6 rounded-2xl shadow-lg bg-[#36393e]  text-[#7289da] text-center font-bold">
       <h2 className=" mx-auto font-inter text-2xl md:text-3xl" >Pick Your Major!</h2>
       <select className="text-xl p-2 mt-4 rounded-2xl bg-[#424549] shadow-lg text-white text-center" name="Major" id="Major" onChange={handleMajorSelect}>
       
@@ -82,7 +82,7 @@ async function handleFormSubmit(data) {
 
       {majorChange &&
       <>
-      <div className="w-[25rem] mt-6 flex flex-col text-2xl max-w-[50rem] mx-auto p-6 rounded-2xl shadow-lg bg-[#36393e] text-[#7289da] text-center font-bold">
+      <div className="w-[24rem] md:w-[25rem] mt-6 flex flex-col text-2xl max-w-[50rem] mx-auto p-6 rounded-2xl shadow-lg bg-[#36393e] text-[#7289da] text-center font-bold">
         <p className="mx-auto font-inter text-3xl">Set your Budget</p>
         <div className="flex flex-row items-center gap-x-6 mt-6">
           <p className="w-20 text-right">₹{props.budget[0]}</p>
