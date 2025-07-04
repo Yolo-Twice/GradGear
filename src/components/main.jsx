@@ -2,6 +2,7 @@ import { useState } from "react"
 import PickMajorForm from "./main components/pickMajorForm"
 import {Cover} from "./ui/cover.jsx"
 import { RingLoader } from "react-spinners"
+import RemarksBox from "./ui/remarksBox.jsx"
 
 export default function Main() {
     const [getStartedButton,setGetStartedButton] = useState(false)
@@ -38,6 +39,7 @@ export default function Main() {
         <br className="mb-[6rem]"></br>
         {loading ? <div className="flex justify-center items-center"><RingLoader color="#7289da"/></div> : result && <div className=" bg-[#23262b] border border-white/10 rounded-lg  p-6 mb-40 rendered-content" dangerouslySetInnerHTML={{__html: result }} />}
         </div>
+        <RemarksBox />
         </div>
     )
 }

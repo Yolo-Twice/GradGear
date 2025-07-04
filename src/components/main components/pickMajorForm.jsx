@@ -65,7 +65,7 @@ export default function PickMajorForm(props) {
       </h2>
 
       <div className="w-[24rem] md:w-[25rem] flex flex-col text-2xl max-w-[50rem] mx-auto p-6 rounded-2xl shadow-lg border border-white/10 text-center font-bold">
-        <h2 className="mx-auto font-inter text-2xl text-[#7289da] md:text-3xl">Pick Your Major!</h2>
+        <h2 className="mx-auto font-inter text-2xl text-[#7289da] md:text-3xl">Pick Your Major</h2>
         <select
           className="text-xl p-2 mt-4 rounded-xl bg-[#23262b] border border-white/10 shadow-lg text-[#e4e7eb] text-center"
           name="Major"
