@@ -4,8 +4,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Branding */}
         <div>
-          <h2 className="text-2xl font-bold mb-3 text-left">GradGear</h2>
-          <p className="text-sm mb-4 text-left">
+          <h2 className="text-2xl font-bold mb-3 md:text-left text-center">GradGear</h2>
+          <p className="text-sm mb-4 md:text-left text-center">
             Get a starter kit recommendation for commencing your college life according to your budget, compare specific products and get best buy links too. <br /><br /> More features coming soon!
           </p>
           <div className="flex space-x-4">
