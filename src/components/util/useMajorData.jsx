@@ -14,5 +14,6 @@ export default function useMajorData() {
         } , []   
     );
     return majorData
+    
 
 }
