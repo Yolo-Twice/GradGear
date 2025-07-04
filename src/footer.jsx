@@ -16,8 +16,8 @@ export default function Footer() {
         </div>
 
         {/* Features */}
-        <div className="text-left">
-          <h3 className="font-semibold text-left">Features</h3>
+        <div className="text-center">
+          <h3 className="font-semibold text-center">Features</h3>
           <ul className="space-y-1 text-sm text-gray-300 mt-2">
             <li><a href="#">Major Specific Kits</a></li>
             <li><a href="#">Budget Setter</a></li>
@@ -27,8 +27,8 @@ export default function Footer() {
         </div>
 
         {/* Resources */}
-        <div className="text-left">
-          <h3 className="font-semibold text-left">Resources</h3>
+        <div className="text-center">
+          <h3 className="font-semibold text-center">Resources</h3>
           <ul className="space-y-1 text-sm text-gray-300 mt-2">
             <li><a href="#">Documentation</a></li>
             <li><a href="#">API</a></li>
@@ -38,8 +38,8 @@ export default function Footer() {
         </div>
 
         {/* Contact */}
-        <div className="text-left">
-          <h3 className="font-semibold text-left">Contact</h3>
+        <div className="text-center">
+          <h3 className="font-semibold text-center">Contact</h3>
           <p className="text-sm text-gray-300 mt-2">
             <i className="far fa-envelope mr-2"></i> support@gradgear.app
           </p>
