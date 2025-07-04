@@ -4,9 +4,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Branding */}
         <div>
-          <h2 className="text-2xl font-bold mb-3">GradGear</h2>
-          <p className="text-sm mb-4">
-            Get a starter kit recommendation for commencing your college life according to your budget, compare specific products and get best buy links too. <br /> <br /> More features coming soon!
+          <h2 className="text-2xl font-bold mb-3 text-left">GradGear</h2>
+          <p className="text-sm mb-4 text-left">
+            Get a starter kit recommendation for commencing your college life according to your budget, compare specific products and get best buy links too. <br /><br /> More features coming soon!
           </p>
           <div className="flex space-x-4">
             <a href="#" aria-label="Twitter"><i className="fab fa-twitter text-xl"></i></a>
@@ -16,9 +16,9 @@ export default function Footer() {
         </div>
 
         {/* Features */}
-        <div>
-          <h3 className="font-semibold mb-2">Features</h3>
-          <ul className="space-y-1 text-sm text-gray-300">
+        <div className="text-left">
+          <h3 className="font-semibold text-left">Features</h3>
+          <ul className="space-y-1 text-sm text-gray-300 mt-2">
             <li><a href="#">Major Specific Kits</a></li>
             <li><a href="#">Budget Setter</a></li>
             <li><a href="#">Compare Products</a></li>
@@ -27,9 +27,9 @@ export default function Footer() {
         </div>
 
         {/* Resources */}
-        <div>
-          <h3 className="font-semibold mb-2">Resources</h3>
-          <ul className="space-y-1 text-sm text-gray-300">
+        <div className="text-left">
+          <h3 className="font-semibold text-left">Resources</h3>
+          <ul className="space-y-1 text-sm text-gray-300 mt-2">
             <li><a href="#">Documentation</a></li>
             <li><a href="#">API</a></li>
             <li><a href="#">Tutorials</a></li>
@@ -38,9 +38,9 @@ export default function Footer() {
         </div>
 
         {/* Contact */}
-        <div>
-          <h3 className="font-semibold mb-2">Contact</h3>
-          <p className="text-sm text-gray-300">
+        <div className="text-left">
+          <h3 className="font-semibold text-left">Contact</h3>
+          <p className="text-sm text-gray-300 mt-2">
             <i className="far fa-envelope mr-2"></i> support@gradgear.app
           </p>
         </div>
@@ -48,7 +48,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-        <p className="mb-2 md:mb-0">© 2025 GradGear. All rights reserved.</p>
+        <p className="mb-2 md:mb-0 text-left md:text-center">© 2025 GradGear. All rights reserved.</p>
         <div className="space-x-4">
           <a href="#" className="hover:text-white">Privacy Policy</a>
           <a href="#" className="hover:text-white">Terms of Service</a>
