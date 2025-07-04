@@ -40,11 +40,9 @@ export default function Footer() {
         {/* Contact */}
         <div className="text-center">
           <h3 className="font-semibold text-center">Contact</h3>
-          <a href="">
           <p className="text-sm text-gray-300 mt-2">
             <i className="far fa-envelope mr-2"></i> gradgear.app@gmail.com
           </p>
-          </a>
         </div>
       </div>
 
