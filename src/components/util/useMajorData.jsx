@@ -3,7 +3,7 @@ import axios from 'axios'
 export default function useMajorData() {
     const [majorData, setMajorData] = useState([])
     const baseURL = window.location.hostname === "localhost"
-  ? "http://localhost:3001/api/budget"
+  ? "https://gradgearbackend.onrender.com/api/budget"
   : "https://gradgearbackend.onrender.com/api/budget"
   ;
     useEffect(
