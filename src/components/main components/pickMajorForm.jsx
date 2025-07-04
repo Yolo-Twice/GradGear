@@ -58,16 +58,16 @@ export default function PickMajorForm(props) {
     <form
       onSubmit={handleFormSubmit}
       name="PickMajor"
-      className="w-[25rem] md:w-[30rem] flex flex-col bg-[#1f2124] rounded-xl p-2 md:p-12 pt-4 mx-auto text-[#7289da]"
+      className="w-[25rem] md:w-[30rem] flex flex-col bg-[#23262b] rounded-2xl p-2 md:p-12 pt-4 mx-auto text-[#7289da] border border-white/10"
     >
       <h2 className="text-3xl md:text-4xl mx-auto text-[#7289da] text-center font-bold mb-10">
         Tell us about yourself!
       </h2>
 
-      <div className="w-[24rem] md:w-[25rem] flex flex-col text-2xl max-w-[50rem] mx-auto p-6 rounded-2xl shadow-lg bg-[#36393e] text-center font-bold">
+      <div className="w-[24rem] md:w-[25rem] flex flex-col text-2xl max-w-[50rem] mx-auto p-6 rounded-2xl shadow-lg border border-white/10 text-center font-bold">
         <h2 className="mx-auto font-inter text-2xl text-[#7289da] md:text-3xl">Pick Your Major!</h2>
         <select
-          className="text-xl p-2 mt-4 rounded-2xl bg-[#424549] shadow-lg text-[#7289da] text-center"
+          className="text-xl p-2 mt-4 rounded-xl bg-[#23262b] border border-white/10 shadow-lg text-[#e4e7eb] text-center"
           name="Major"
           id="Major"
           onChange={handleMajorSelect}
@@ -83,9 +83,9 @@ export default function PickMajorForm(props) {
 
       {majorChange && (
         <>
-          <div className="w-[24rem] md:w-[25rem] mt-6 flex flex-col text-2xl max-w-[50rem] mx-auto p-6 rounded-2xl shadow-lg bg-[#36393e] text-center font-bold">
+          <div className="w-[24rem] md:w-[25rem] mt-6 flex flex-col text-2xl max-w-[50rem] mx-auto p-6 rounded-2xl shadow-lg bg-[#23262b] border border-white/10 text-center font-bold">
             <p className="mx-auto font-inter text-3xl">Set your Budget</p>
-            <div className="flex flex-row items-center gap-x-6 mt-6">
+            <div className="flex flex-row items-center gap-x-6 mt-6 text-[#e4e7eb]">
               <p className="w-20 text-right">₹{props.budget[0]}</p>
               <div className="flex-1">
                 <BudgetRangeSlider
@@ -103,7 +103,7 @@ export default function PickMajorForm(props) {
             aria-label="Get Recommendation"
             type="submit"
             onClick={handleGetRecommendation}
-            className="bg-[#25a86c] hover:bg-[#32ba7c] rounded-2xl shadow-lg w-[12rem] mt-10 mx-auto h-[3rem] text-white font-inter text-center text-2xl font-semibold"
+            className=" bg-[#7289da] hover:bg-[#53639f] rounded-xl shadow-lg w-[12rem] mt-10 mx-auto h-[3rem] text-white font-inter text-center text-2xl font-semibold"
           >
             SUBMIT
           </button>

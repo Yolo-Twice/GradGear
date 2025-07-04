@@ -14,7 +14,7 @@ export default function Main() {
     }
     
     return (<div className="flex flex-col mx-auto gap-6 mt-[6rem] md:mt-[12REM]">
-        <div className="lg:max-w-[100%] mx-auto flex flex-col gap-y-6" >
+        <div className="lg:max-w-[100%] mx-auto flex flex-col gap-y-6 mt-24" >
             <h1 className="font-inter text-white text-center text-4xl md:text-5xl font-bold mx-auto">
                 Kickstart college?<br/>Let's get you sorted</h1>
                 <h1 className="font-inter text-white text-center text-2xl md:text-3xl font-bold mx-auto">
@@ -32,11 +32,11 @@ export default function Main() {
         <button 
             aria-label="Get Started"
             onClick={handleGetStarted} 
-            className="bg-[#25a86c] hover:bg-[#32ba7c] rounded-2xl shadow-lg w-[16rem] mx-auto h-[9vh] text-white font-inter text-center text-3xl font-semibold">Get Started!
+            className="bg-[#7289da] hover:bg-[#53639f] rounded-xl shadow-lg w-[16rem] mx-auto h-[9vh] text-white font-inter text-center text-3xl font-semibold">Get Started!
         </button>
 )}      
         <br className="mb-[6rem]"></br>
-        {loading ? <div className="flex justify-center items-center"><RingLoader color="#7289da"/></div> : result && <div className="px-6 mb-40 rendered-content" dangerouslySetInnerHTML={{__html: result }} />}
+        {loading ? <div className="flex justify-center items-center"><RingLoader color="#7289da"/></div> : result && <div className=" bg-[#23262b] border border-white/10 rounded-lg  p-6 mb-40 rendered-content" dangerouslySetInnerHTML={{__html: result }} />}
         </div>
         </div>
     )
