@@ -11,17 +11,17 @@ html, body {
 
 
 .rendered-content h3 {
-  @apply text-3xl font-bold text-white mb-4 text-center;
+  @apply text-3xl font-bold text-[#7289da] mb-4 text-center;
 }
 
 
 .rendered-content h1,h2,h3 {
-  @apply text-3xl font-bold text-white mb-4 text-center;
+  @apply text-3xl font-bold text-[#7289da] mb-4 text-center;
 }
 
 
 .rendered-content h4 {
-  @apply text-xl font-bold text-white mb-4;
+  @apply text-xl font-bold text-white border-t-[1px] mt-10 border-white/10 mb-4;
 }
 
 
