@@ -6,9 +6,11 @@ import RemarksBox from "./ui/remarksBox.jsx"
 
 export default function Main() {
     const [getStartedButton,setGetStartedButton] = useState(false)
+    const [feedback,setFeedback] = useState(false)
     const [budgetRange, setBudgetRange] = useState([20000, 80000])
     const [result,setResult] = useState(null)
     const [loading,setLoading] = useState(false)
+
 
     function handleGetStarted() {
         setGetStartedButton( prevGetStartedButton => ! prevGetStartedButton)
@@ -39,7 +41,13 @@ export default function Main() {
         <br className="mb-[6rem]"></br>
         {loading ? <div className="flex justify-center items-center"><RingLoader color="#7289da"/></div> : result && <div className=" bg-[#23262b] border border-white/10 rounded-lg  p-6 mb-40 rendered-content mx-auto max-w-[95%]" dangerouslySetInnerHTML={{__html: result }} />}
         </div>
-        <RemarksBox />
+        <div className="mt-[25vh] flex">
+         {feedback ? <RemarksBox/> : <button 
+            aria-label="Share Feedback"
+            onClick={()=>setFeedback(true)} 
+            className="bg-[#7289da] hover:bg-[#53639f] rounded-2xl shadow-lg w-[16rem] mx-auto h-[7vh] text-white font-inter text-center text-3xl font-semibold">Share Feedback
+        </button>}
+        </div> 
         </div>
     )
 }

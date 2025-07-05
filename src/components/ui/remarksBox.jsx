@@ -42,7 +42,7 @@ export default function RemarksBox({ onSubmit }) {
     };
 
     return (
-        <div className="bg-[#1e1e1e] text-white p-6 rounded-2xl shadow-lg max-w-xl mx-auto mt-16">
+        <div className="bg-[#23262b] border border-white/10 text-white p-6 rounded-2xl shadow-lg max-w-xl mx-auto mt-16">
             {!submitted ? (
                 <>
                     <h2 className="text-lg font-semibold mb-4 text-left">
