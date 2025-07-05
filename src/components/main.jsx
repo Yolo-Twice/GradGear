@@ -45,7 +45,7 @@ export default function Main() {
          {feedback ? <RemarksBox/> : <button 
             aria-label="Share Feedback"
             onClick={()=>setFeedback(true)} 
-            className="bg-[#7289da] hover:bg-[#53639f] rounded-2xl shadow-lg w-[16rem] mx-auto h-[7vh] text-white font-inter text-center text-3xl font-semibold">Share Feedback
+            className="bg-[#7289da] hover:bg-[#53639f] rounded-2xl shadow-lg w-[10rem] mx-auto h-[5vh] text-white font-inter text-center text-lg font-semibold">Share Feedback
         </button>}
         </div> 
         </div>
